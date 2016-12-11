@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>jQuery UI Icons Parser</title>
+	<title>jQuery Icons Parser</title>
 	<style>
-		* { font-family: arial, helvetica; font-weight: normal; margin: 0px; }
-		div:not(:first-child) { margin-top: 10px; }
-		p:not(:first-child) { margin-top: 5px; }
-		body { padding: 20px; }
+		[data-label]::after {
+			content: attr(data-label);
+			font-style: italic;
+		}
 	</style>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="./jquery.icons.js"></script>
+	
+	<!-- jQuery UI -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
-	<script src="./jquery.icons.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$(".ui-icons").icons();
+			$(".icons").icons();
 		});
 	</script>
 </head>
 <body>
-	<h1>jQuery UI Icons Parser</h1>
-	<p>Every text node in any element with the `ui-icons` class will be parsed unless it's in a script or style.</p>
-	<div class="ui-icons">
-		<p data-test="[ui-flag] won't be replaced, because it's in an attribute">[ui-flag] [ui-invalid] [invalid] [ui-invalid!] [ui-CAPITal]</p>
-		<script>
-			// [ui-flag] won't be replaced, because it's in a script tag
-		</script>
+	<div class="container">
+		<h1>jQuery Icons Parser</h1>
+		<p>Every text node in any element with the `icons` class will be parsed unless it's in a script or style.</p>
+		<div class="icons">
+			<p data-test="[ui-flag] won't be replaced, because it's in an attribute">
+				<span data-label="[ui-flag]"></span> [ui-flag]
+				<span data-label="[ui-invalid]"></span> [ui-invalid]
+				<span data-label="[ui-invalid]"></span> [invalid]
+				<span data-label="[ui-invalid!]"></span> [ui-invalid!]
+				<span data-label="[ui-CAPITal]"></span> [ui-CAPITal]
+			</p>
+			<script>
+				// [ui-flag] won't be replaced, because it's in a script tag
+			</script>
+		</div>
 	</div>
 </body>
 </html>

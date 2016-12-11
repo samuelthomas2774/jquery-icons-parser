@@ -1,7 +1,7 @@
-jQuery UI Icons Parser
+jQuery Icons Parser
 ============
 
-This adds a basic syntax for jQuery UI Icons:
+This adds a basic syntax for icon frameworks:
 
 ```html
 [ui-flag]
@@ -42,7 +42,7 @@ It will leave script and style tags alone:
 Requirements and installation
 ------------
 
-jQuery 1.8 or later is required. jQuery UI is not required, but some stylesheet should be included, otherwise icons won't display.
+jQuery 1.8 or later is required.
 
 ```html
 <script src="/jqueryui-icons-parser/jquery.icons.js"></script>
@@ -55,6 +55,6 @@ Usage
 Simply call .icons():
 
 ```js
-$(".ui-icons").icons();
+$(".render-icons").icons();
 
 ```
