@@ -25,7 +25,18 @@
 	// $.icons.libraries: A list of icon libraries that can be used
 	$.icons.libraries = {
 		"icon": "<span class=\"icon icon-%icon%\"></span>",
-		"ui": "<span class=\"ui-icon ui-icon-%icon%\" style=\"display: inline-block;\"></span>"
+		"ui": "<span class=\"ui-icon ui-icon-%icon%\" style=\"display: inline-block;\"></span>",
+		"glyphicon": "<span class=\"glyphicon glyphicon-%icon%\"></span>",
+		"fa": function(icon) {
+			var match = icon.replace(/((-spin|-pulse)*)$/gi, " $1").split(" -"),
+				icon = match[0],
+				attr = match[1] ? " fa-" + match[1].trim().split("-").join(" fa-") : "";
+			
+			console.log([ icon, match, attr ]);
+			return "<i class=\"fa fa-" + icon + attr + "\"></i>";
+		},
+		"f7": "<span class=\"f7-icons\">%icon%</span>",
+		"ion": "<span class=\"ion-%icon%\"></span>"
 	};
 	
 	// $.icons.textnodes(): Returns any text nodes unless in a script or style element
