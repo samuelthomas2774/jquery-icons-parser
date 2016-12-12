@@ -36,7 +36,11 @@
 			return "<i class=\"fa fa-" + icon + attr + "\"></i>";
 		},
 		"f7": "<span class=\"f7-icons\">%icon%</span>",
-		"ion": "<span class=\"ion-%icon%\"></span>"
+		"ion": "<span class=\"ion-%icon%\"></span>",
+		"typcn": "<span class=\"typcn typcn-%icon%\"></span>",
+		"fi": "<i class=\"fi-%icon%\"></i>",
+		"mif": "<span class=\"mif-%icon%\"></span>",
+		"el": "<i class=\"el el-%icon%\"></i>"
 	};
 	
 	// $.icons.textnodes(): Returns any text nodes unless in a script or style element

@@ -49,6 +49,32 @@ jQuery 1.8 or later is required.
 
 ```
 
+Icon frameworks
+------------
+
+- jQuery UI Icons
+- Glyphicons
+- Font Awesome
+- Framework7 Icons
+- Ionicons
+- Typicons
+- Foundation Icons
+- Metro UI Icons
+- Elusive Icons
+
+You can add custom icon frameworks like this:
+
+```js
+// You can add a string - %icon% will be replaced with the name of the icon
+$.icons.libraries.myicons = "<span class=\"myicons myicons-%icon%\"></span>";
+
+// ... or you can add a function - the name of the icon will be passed as the first argument
+$.icons.libraries.myicons = function(icon) {
+	return "<span class=\"myicons myicons-" + icon + "\"></span>";
+};
+
+```
+
 Usage
 ------------
 
