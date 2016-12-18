@@ -48,7 +48,9 @@
 		// Metro UI Icons
 		"mif": "<span class=\"mif-%icon%\"></span>",
 		// Elusive Icons
-		"el": "<i class=\"el el-%icon%\"></i>"
+		"el": "<i class=\"el el-%icon%\"></i>",
+		// Octicons
+		"octicon": "<span class=\"octicon octicon-%icon%\"></span>"
 	};
 	
 	// $.icons.textnodes(): Returns any text nodes unless in a script or style element
