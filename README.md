@@ -53,14 +53,25 @@ Icon frameworks
 ------------
 
 - jQuery UI Icons
+	[ui-{icon}]
 - Glyphicons
+	[glyphicon-{icon}]
 - Font Awesome
+	[fa-{icon}]
+	[fa-{icon}-spin]
+	[fa-{icon}-pulse]
 - Framework7 Icons
+	[f7-{icon}]
 - Ionicons
+	[ion-{icon}]
 - Typicons
+	[typcn-{icon}]
 - Foundation Icons
+	[fi-{icon}]
 - Metro UI Icons
+	[mif-{icon}]
 - Elusive Icons
+	[el-{icon}]
 
 You can add custom icon frameworks like this:
 

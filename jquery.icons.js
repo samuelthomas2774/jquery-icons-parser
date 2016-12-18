@@ -19,27 +19,35 @@
 		return $this;
 	};
 	
-	$.icons = {};
 	// $.icons
+	$.icons = {};
 	
 	// $.icons.libraries: A list of icon libraries that can be used
 	$.icons.libraries = {
 		"icon": "<span class=\"icon icon-%icon%\"></span>",
+		// jQuery UI Icons
 		"ui": "<span class=\"ui-icon ui-icon-%icon%\" style=\"display: inline-block;\"></span>",
+		// Glyphicons
 		"glyphicon": "<span class=\"glyphicon glyphicon-%icon%\"></span>",
+		// Font Awesome
 		"fa": function(icon) {
 			var match = icon.replace(/((-spin|-pulse)*)$/gi, " $1").split(" -"),
 				icon = match[0],
 				attr = match[1] ? " fa-" + match[1].trim().split("-").join(" fa-") : "";
 			
-			console.log([ icon, match, attr ]);
 			return "<i class=\"fa fa-" + icon + attr + "\"></i>";
 		},
+		// Framework7 Icons
 		"f7": "<span class=\"f7-icons\">%icon%</span>",
+		// Ionicons
 		"ion": "<span class=\"ion-%icon%\"></span>",
+		// Typicons
 		"typcn": "<span class=\"typcn typcn-%icon%\"></span>",
+		// Foundation Icons
 		"fi": "<i class=\"fi-%icon%\"></i>",
+		// Metro UI Icons
 		"mif": "<span class=\"mif-%icon%\"></span>",
+		// Elusive Icons
 		"el": "<i class=\"el el-%icon%\"></i>"
 	};
 	
